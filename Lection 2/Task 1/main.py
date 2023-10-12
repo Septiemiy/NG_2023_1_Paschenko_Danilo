@@ -1,5 +1,4 @@
 elementsList = []
-element = ""
 
 while True:
     element = input("Input what you want (input \"quit\" for exit): ")
