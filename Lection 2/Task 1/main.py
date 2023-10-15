@@ -1,9 +1,3 @@
-elementsList = []
-
-while True:
-    element = input("Input what you want (input \"quit\" for exit): ")
-    if element == "quit":
-        break
-    elementsList.append(element)
+elementsList = input("Input what you want: ").split(" ")
 
 print(f"List with unique elements: {set(elementsList)}")
