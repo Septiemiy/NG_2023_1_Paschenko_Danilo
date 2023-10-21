@@ -7,5 +7,4 @@ vowelsFromStringList = []
 for letter in string:
     if letter in vowels:
         vowelsFromStringList.append(letter)
-
-print(f"\nAll vowels from string: {set(vowelsFromStringList)}")
+        print(f"\nAll vowels from string: {set(vowelsFromStringList)}")
