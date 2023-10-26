@@ -2,9 +2,7 @@ string = input("Input string: ")
 
 vowels = "aeiouAEIOU"
 
-vowelsFromStringList = []
-
+print("Result: ", end = "")
 for letter in string:
     if letter in vowels:
-        vowelsFromStringList.append(letter)
-        print(f"\nAll vowels from string: {set(vowelsFromStringList)}")
+        print(f"{letter}, ", end = "")
