@@ -1,12 +1,13 @@
 elementsList = input("Input what you want: ").split(" ")
+elementsListSet = set(elementsList)
 
-numberCount = 0
+numberDict = {}
 
-for element in elementsList:
+for elem in elementsListSet:
     try:
-        int(element)
-        numberCount += 1
+        int(elem)
+        numberDict[elem] = elementsList.count(elem)
     except:
         continue
 
-print(f"\nCount of number in list: {numberCount}")
+print(f"Count of numbers in list: {numberDict}")
