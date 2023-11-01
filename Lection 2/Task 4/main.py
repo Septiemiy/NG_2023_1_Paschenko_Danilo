@@ -1,6 +1,6 @@
-string = input("Input string: ")
+string = input("Input string: ").lower()
 
-vowels = "aeiouAEIOU"
+vowels = "aeiou"
 
 print("Result: ", end = "")
 for letter in string:
