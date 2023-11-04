@@ -2,6 +2,48 @@ from math import sqrt
 
 print("Calculator\n")
 
+def inputNumberOne():
+    return int(input("Input number one: "))
+
+def inputNumberTwo():
+    return int(input("Input number two: "))
+
+def inputNumberExponentation():
+    return int(input("Input number for exponentation: "))
+
+def inputNumberPower():
+    return int(input("Input power of number: "))
+
+def inputNumberSquareRoot():
+    return int(input("Input number for square root: "))
+
+def addition():
+    result = inputNumberOne() + inputNumberTwo()
+    return result
+
+def subtraction():
+    result = inputNumberOne() - inputNumberTwo()
+    return result
+
+def multiplication():
+    result = inputNumberOne() * inputNumberTwo()
+    return result
+
+def division():
+    result = round(inputNumberOne() / inputNumberTwo(), 3)
+    return result
+
+def power():
+    result = inputNumberExponentation() ** inputNumberPower()
+    return result
+
+def squareRoot():
+    result = round(sqrt(inputNumberSquareRoot()), 3)
+    return result
+
+def outputResult(result):
+    print(f"Result: {result}")
+
 def main():
     while True:
         print("Choice operation: +, -, *, /, ^, sqrt or q to exit")
@@ -10,23 +52,21 @@ def main():
 
         match operator:
             case "+":
-                result = int(input("Input first number: ")) + int(input("Input second number: "))
+                outputResult(addition())
             case "-":
-                result = int(input("Input first number: ")) - int(input("Input second number: "))
+                outputResult(subtraction())
             case "*":
-                result = int(input("Input firs number: ")) * int(input("Input second number: "))
+                outputResult(multiplication())
             case "/":
-                result = round(int(input("Input first number: ")) / int(input("Input second number: ")), 3)
+                outputResult(division())
             case "^":
-                result = int(input("Input number for exponentation: ")) ** int(input("Input power of number: "))
+                outputResult(power())
             case "sqrt":
-                result = round(sqrt(int(input("Input number for square root: "))), 3)
+                outputResult(squareRoot())
             case "q":
                 exit()
             case _:
                 print("Invalid choice\n")
                 continue
-        
-        print(f"Result: {result}\n")
 
 main()
