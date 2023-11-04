@@ -1,8 +1,11 @@
 string = input("Input string: ").lower()
+stringList = [(x) for x in string]
+
+lettersDict = {}
 
 vowels = "aeiou"
 
-print("Result: ", end = "")
-for letter in string:
+for letter in stringList:
     if letter in vowels:
-        print(f"{letter}, ", end = "")
+        lettersDict[letter] = string.count(letter)
+print(f"Result: {lettersDict}")
