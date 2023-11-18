@@ -1,0 +1,186 @@
+<html>
+    <head>
+        <title>Calculator</title>
+    </head>
+    <body>
+        <form action="/result" method="GET">
+            <input id="inputArea" name="inputArea" class="calcArea" type="text" value="{{ exerciseResult }}" readonly>
+            <button class="buttonEqual">=</button>
+        </form>
+        <button value="0" class="button0" onclick="addToInput(this)">0</button>
+        <button value="1" class="button1" onclick="addToInput(this)">1</button>
+        <button value="2" class="button2" onclick="addToInput(this)">2</button>
+        <button value="3" class="button3" onclick="addToInput(this)">3</button>
+        <button value="4" class="button4" onclick="addToInput(this)">4</button>
+        <button value="5" class="button5" onclick="addToInput(this)">5</button>
+        <button value="6" class="button6" onclick="addToInput(this)">6</button>
+        <button value="7" class="button7" onclick="addToInput(this)">7</button>
+        <button value="8" class="button8" onclick="addToInput(this)">8</button>
+        <button value="9" class="button9" onclick="addToInput(this)">9</button>
+        <button class="buttonC" onclick="deleteLastSymbol()">C</button>
+        <button class="buttonAC" onclick="deleteAllSymbols()">AC</button>
+        <button value="+" class="buttonAdd" onclick="addToInput(this)">+</button>
+        <button value="-" class="buttonSub" onclick="addToInput(this)">-</button>
+        <button value="*" class="buttonMulti" onclick="addToInput(this)">*</button>
+        <button value="/" class="buttonDiv" onclick="addToInput(this)">/</button>
+        <button value="^" class="buttonExp" onclick="addToInput(this)">^</button>
+        <button value="√" class="buttonSQRT" onclick="addToInput(this)">√</button>
+    </body>
+    <style>
+        .calcArea {
+            position: fixed;
+            width: 36%;
+            height: 43px;
+            margin-left: 34.5%;
+            margin-top: 5%;
+            border: 2px solid black;
+            border-radius: 11px;
+            background: rgba(51, 51, 51, 0.7);
+            text-align: right;
+            color: white;
+            font-size: 23px;
+            padding-right: 11px;
+        }
+
+        button {
+            position: fixed;
+            width: 9%;
+            height: 11%;
+            border-radius: 11px;
+            background: rgba(51, 51, 51, 0.7);
+            text-align: center;
+            color: white;
+            font-size: 23px;
+
+        }
+
+        .buttonExp {
+            margin-left: 34.5%;
+            margin-top: 7.5%;
+        }
+
+        .buttonSQRT {
+            margin-left: 43.5%;
+            margin-top: 7.5%;
+        }
+
+        .buttonC {
+            margin-left: 52.5%;
+            margin-top: 7.5%;
+        }
+
+        .buttonAC {
+            margin-left: 61.5%;
+            margin-top: 7.5%;
+        }
+
+        .button7 {
+            margin-left: 34.5%;
+            margin-top: 12.9%;
+        }
+
+        .button8 {
+            margin-left: 43.5%;
+            margin-top: 12.9%;
+        }
+        
+        .button9 {
+            margin-left: 52.5%;
+            margin-top: 12.9%;
+        }
+
+        .buttonDiv {
+            margin-left: 61.5%;
+            margin-top: 12.9%;
+        }
+
+        .button4 {
+            margin-left: 34.5%;
+            margin-top: 18.3%;
+        }
+
+        .button5 {
+            margin-left: 43.5%;
+            margin-top: 18.3%;
+        }
+        
+        .button6 {
+            margin-left: 52.5%;
+            margin-top: 18.3%;
+        }
+
+        .buttonMulti {
+            margin-left: 61.5%;
+            margin-top: 18.3%;
+        }
+
+        .button1 {
+            margin-left: 34.5%;
+            margin-top: 23.7%;
+        }
+
+        .button2 {
+            margin-left: 43.5%;
+            margin-top: 23.7%;
+        }
+
+        .button3 {
+            margin-left: 52.5%;
+            margin-top: 23.7%;
+        }
+
+        .buttonSub {
+            margin-left: 61.5%;
+            margin-top: 23.7%;
+        }
+
+        .button0 {
+            margin-left: 34.5%;
+            margin-top: 29.1%;
+        }
+
+        .buttonEqual {
+            margin-left: 43.5%;
+            margin-top: 29.1%;
+            width: 18%;
+        }
+
+        .buttonAdd {
+            margin-left: 61.5%;
+            margin-top: 29.1%;
+        }
+    </style>
+    <script>
+        function addToInput(button) {
+            var buttonValue = button.value;
+            var inputArea = document.getElementById("inputArea");
+            var inputValue = inputArea.value;
+            
+            if (buttonValue === "+" || buttonValue === "-" || buttonValue === "*" || buttonValue === "/" || buttonValue === "^") {
+                buttonValue = " " + buttonValue + " ";
+            }
+            else if (buttonValue === "√") {
+                buttonValue = buttonValue + " ";
+            }
+
+            inputArea.value += buttonValue;
+        }
+
+        function deleteLastSymbol() {
+            var inputArea = document.getElementById("inputArea");
+            var inputValue = inputArea.value;
+            
+            var temp = inputValue.split('');
+            delete temp[inputValue.length - 1];
+            inputValue = temp.join('');
+
+            inputArea.value = inputValue;
+        }
+
+        function deleteAllSymbols() {
+            var inputArea = document.getElementById("inputArea");
+
+            inputArea.value = '';
+        }
+    </script>
+</html>
