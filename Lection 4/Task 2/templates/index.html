@@ -1,0 +1,199 @@
+<html>
+    <head>
+
+    </head>
+    <body>
+        <form action="/move" method="GET">
+            <input id="cell1" class="cell1" name="cell1" type="text" value="" readonly>
+            <input id="cell2" class="cell2" name="cell2" type="text" value="" readonly>
+            <input id="cell3" class="cell3" name="cell3" type="text" value="" readonly>
+            <input id="cell4" class="cell4" name="cell4" type="text" value="" readonly>
+            <input id="cell5" class="cell5" name="cell5" type="text" value="" readonly>
+            <input id="cell6" class="cell6" name="cell6" type="text" value="" readonly>
+            <input id="cell7" class="cell7" name="cell7" type="text" value="" readonly>
+            <input id="cell8" class="cell8" name="cell8" type="text" value="" readonly>
+            <input id="cell9" class="cell9" name="cell9" type="text" value="" readonly>
+            <button name="move" value="R" class="buttonR">→</button>
+            <button name="move" value="Up" class="buttonUp">↑</button>
+            <button name="move" value="L" class="buttonL">←</button>
+            <button name="move" value="Down" class="buttonDown">↓</button>
+            <input id="currentPosition" name="currentPosition" class="currentPosition" type="text" value="{{ position }}" readonly>
+        </form>
+    </body>
+    <style>
+        button {
+            position: fixed;
+            width: 9%;
+            height: 11%;
+            border-radius: 11px;
+            background: rgba(51, 51, 51, 0.7);
+            text-align: center;
+            color: white;
+            font-size: 23px;
+        }
+
+        .buttonR {
+            margin-left: 20%;
+            margin-top: 5.5%;
+        }
+
+        .buttonUp {
+            margin-left: 11%;
+            margin-top: 3%;
+        }
+
+        .buttonL {
+            margin-left: 2%;
+            margin-top: 5.5%;
+        }
+
+        .buttonDown {
+            margin-left: 11%;
+            margin-top: 8.3%;
+        }
+
+        .currentPosition {
+            visibility: hidden;
+        }
+
+        .cell1 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 35%;
+            margin-top: 5%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell2 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 39.2%;
+            margin-top: 5%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell3 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 43.5%;
+            margin-top: 5%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell4 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 35%;
+            margin-top: 9.2%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell5 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 39.2%;
+            margin-top: 9.2%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell6 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 43.5%;
+            margin-top: 9.2%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell7 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 35%;
+            margin-top: 13.5%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell8 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 39.2%;
+            margin-top: 13.5%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+
+        .cell9 {
+            position: fixed;
+            width: 80px;
+            height: 80px;
+            margin-left: 43.5%;
+            margin-top: 13.5%;
+            border: 2px solid black;
+            text-align: center;
+            font-size: 23px;
+        }
+    </style>
+    <script>
+        var position = document.getElementById("currentPosition");
+        switch (position.value) {
+            case "0:0":
+                var cell = document.getElementById("cell1");
+                cell.value = '@';
+                break;
+            case "1:0":
+                var cell = document.getElementById("cell2");
+                cell.value = '@';
+                break;
+            case "2:0":
+                var cell = document.getElementById("cell3");
+                cell.value = '@';
+                break;
+            case "0:1":
+                var cell = document.getElementById("cell4");
+                cell.value = '@';
+                break;
+            case "1:1":
+                var cell = document.getElementById("cell5");
+                cell.value = '@';
+                break;
+            case "2:1":
+                var cell = document.getElementById("cell6");
+                cell.value = '@';
+                break;
+            case "0:2":
+                var cell = document.getElementById("cell7");
+                cell.value = '@';
+                break;
+            case "1:2":
+                var cell = document.getElementById("cell8");
+                cell.value = '@';
+                break;
+            case "2:2":
+                var cell = document.getElementById("cell9");
+                cell.value = '@';
+                break;
+        }
+    </script>
+</html>
