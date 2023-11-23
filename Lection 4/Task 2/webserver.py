@@ -19,7 +19,7 @@ def moveChar():
 
 def getNewPosition(move, currentPosition):
     currentPositionList = currentPosition.split(":")
-    currentPositionList = list(map(lambda x: int(x), currentPositionList))
+    currentPositionList = list(map(lambda num: int(num), currentPositionList))
 
     match move:
         case "R":
@@ -32,7 +32,7 @@ def getNewPosition(move, currentPosition):
             currentPositionList[1] += 1
     
     if checkPosition(currentPositionList) == False:
-        currentPositionList = list(map(lambda x: str(x), currentPositionList))
+        currentPositionList = list(map(lambda num: str(num), currentPositionList))
         return ":".join(currentPositionList)
     else:
         return pos
