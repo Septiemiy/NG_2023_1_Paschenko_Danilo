@@ -2,43 +2,28 @@ from math import sqrt
 
 print("Calculator\n")
 
-def inputNumberOne():
-    return int(input("Input number one: "))
-
-def inputNumberTwo():
-    return int(input("Input number two: "))
-
-def inputNumberExponentation():
-    return int(input("Input number for exponentation: "))
-
-def inputNumberPower():
-    return int(input("Input power of number: "))
-
-def inputNumberSquareRoot():
-    return int(input("Input number for square root: "))
-
 def addition():
-    result = inputNumberOne() + inputNumberTwo()
+    result = int(input("Input number one: ")) + int(input("Input number two: "))
     return result
 
 def subtraction():
-    result = inputNumberOne() - inputNumberTwo()
+    result = int(input("Input number one: ")) - int(input("Input number two: "))
     return result
 
 def multiplication():
-    result = inputNumberOne() * inputNumberTwo()
+    result = int(input("Input number one: ")) * int(input("Input number two: "))
     return result
 
 def division():
-    result = round(inputNumberOne() / inputNumberTwo(), 3)
+    result = round(int(input("Input number one: ")) / int(input("Input number two: ")), 3)
     return result
 
 def power():
-    result = inputNumberExponentation() ** inputNumberPower()
+    result = int(input("Input number for exponentation: ")) ** int(input("Input power of number: "))
     return result
 
 def squareRoot():
-    result = round(sqrt(inputNumberSquareRoot()), 3)
+    result = round(sqrt(int(input("Input number for square root: "))), 3)
     return result
 
 def outputResult(result):
