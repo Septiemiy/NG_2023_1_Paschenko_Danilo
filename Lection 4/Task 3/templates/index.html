@@ -1,0 +1,52 @@
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+    <div>
+        <img src="{{ photo }}" />
+    </div>
+    <form action="/change_photo" method="GET">
+        <button name="change_photo" value="next" class="buttonNext">Далі</button>
+        <button name="change_photo" value="prev" class="buttonPrev">Попередня</button>
+    </form>
+</body>
+<style>
+    .buttonNext {
+        position: absolute;
+        width: 9%;
+        height: 11%;
+        border-radius: 11px;
+        background: rgba(51, 51, 51, 0.7);
+        text-align: center;
+        color: white;
+        font-size: 23px;
+        left: 85%;
+        top: 80%;
+    }
+
+    .buttonPrev {
+        position: absolute;
+        width: 9%;
+        height: 11%;
+        border-radius: 11px;
+        background: rgba(51, 51, 51, 0.7);
+        text-align: center;
+        color: white;
+        font-size: 23px;
+        left: 5%;
+        top: 80%;
+    }
+
+    img {
+        width: 55%;
+        height: 58%;
+        margin-left: 23%;
+        margin-top: 5%;
+        border: 5px solid rgb(49, 48, 48);
+    }
+</style>
+<script>
+    
+</script>
+</html>
