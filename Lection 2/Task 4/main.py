@@ -1,5 +1,7 @@
 string = input("Input string: ").lower()
-stringList = [(x) for x in string]
+stringList = set([(letter) for letter in string])
+
+print(stringList)
 
 lettersDict = {}
 
