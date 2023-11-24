@@ -25,7 +25,6 @@ def photoMoveTracker(buttonMoveValue):
             photoSrcPosition -= 1
     
     photoSrcPosition = checkPosition(photoSrcPosition)
-    print(photoSrcPosition)
     return photoList[photoSrcPosition]
 
 def checkPosition(photoSrcPosition):
