@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>Chat</title>
+    </head>
+    <body>
+        {{ validMess | safe }}
+        <form action="/register" method="GET">
+            <input name="NameInput" class="NameInput" placeholder="Your name" maxlength="64" required/>
+            <input name="PasswordInput" class="PasswordInput" type="password" minlength="8" maxlength="64" placeholder="Your password" required/>
+            <input name="VerifyPasswordInput" class="VerifyPasswordInput" type="password" minlength="8" maxlength="64" placeholder="Verify your password" required/>
+            <button class="RegisterButton">Register</button>
+        </form>
+        <a class="ToSendPageLink" href="/send">Already registered?</a>
+    </body>
+    <style>
+        .NameInput {
+            position: absolute;
+            left: 43%;
+            top: 11%;
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .PasswordInput {
+            position: absolute;
+            left: 43%;
+            top: 18%;
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .VerifyPasswordInput {
+            position: absolute;
+            left: 43%;
+            top: 25%;
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+        }
+
+        .RegisterButton {
+            position: absolute;
+            left: 43%;
+            top: 32%;
+            height: 50px;
+            width: 300px;
+            font-size: 20px;
+            border-radius: 11px;
+            background: rgba(51, 51, 51, 0.897);
+            text-align: center;
+            color: white;
+        }
+
+        p {
+            position: absolute;
+            left: 43%;
+            top: 9%;
+        }
+
+        .ToSendPageLink {
+            position: absolute;
+            left: 43%;
+            top: 38%;
+            font-size: 20px;
+        }
+    </style>
+    <script>
+
+    </script>
+</html>
