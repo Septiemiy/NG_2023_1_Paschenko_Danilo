@@ -3,31 +3,22 @@ from math import sqrt
 print("Calculator\n")
 
 def addition():
-    result = int(input("Input number one: ")) + int(input("Input number two: "))
-    return result
+    print(int(input("Input number one: ")) + int(input("Input number two: ")))
 
 def subtraction():
-    result = int(input("Input number one: ")) - int(input("Input number two: "))
-    return result
+    print(int(input("Input number one: ")) - int(input("Input number two: ")))
 
 def multiplication():
-    result = int(input("Input number one: ")) * int(input("Input number two: "))
-    return result
+    print(int(input("Input number one: ")) * int(input("Input number two: ")))
 
 def division():
-    result = round(int(input("Input number one: ")) / int(input("Input number two: ")), 3)
-    return result
+    print(round(int(input("Input number one: ")) / int(input("Input number two: ")), 3))
 
 def power():
-    result = int(input("Input number for exponentation: ")) ** int(input("Input power of number: "))
-    return result
+    print(int(input("Input number for exponentation: ")) ** int(input("Input power of number: ")))
 
 def squareRoot():
-    result = round(sqrt(int(input("Input number for square root: "))), 3)
-    return result
-
-def outputResult(result):
-    print(f"Result: {result}")
+    print(round(sqrt(int(input("Input number for square root: "))), 3))
 
 def main():
     while True:
@@ -37,17 +28,17 @@ def main():
 
         match operator:
             case "+":
-                outputResult(addition())
+                addition()
             case "-":
-                outputResult(subtraction())
+                subtraction()
             case "*":
-                outputResult(multiplication())
+                multiplication()
             case "/":
-                outputResult(division())
+                division()
             case "^":
-                outputResult(power())
+                power()
             case "sqrt":
-                outputResult(squareRoot())
+                squareRoot()
             case "q":
                 exit()
             case _:
